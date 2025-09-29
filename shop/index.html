@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop premium research peptides - Retatrutide, Tirzepatide, BPC-157, TB-500. Secure checkout and fast shipping.">
+    <title>Shop - PickleballPeptides</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="shop.css">
+    <script src="https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <a href="../index.html"><h1>🏓 PickleballPeptides</h1></a>
+                    </div>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#products">Products</a></li>
+                        <li><a href="../index.html#benefits">Benefits</a></li>
+                        <li><a href="../index.html#quality">Quality</a></li>
+                        <li><a href="../index.html#faq">FAQ</a></li>
+                        <li><a href="index.html" class="btn-primary active">Shop</a></li>
+                    </ul>
+                    <button class="mobile-toggle" id="mobileToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Shop Hero -->
+    <section class="shop-hero">
+        <div class="container">
+            <div class="shop-hero-content">
+                <h1>Shop Premium Research Peptides</h1>
+                <p>Pharmaceutical-grade peptides with verified purity. Secure checkout and fast shipping.</p>
+                <div class="shop-trust-badges">
+                    <div class="trust-badge">
+                        <span class="badge-icon">🔒</span>
+                        <span>Secure Checkout</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="badge-icon">📦</span>
+                        <span>Fast Shipping</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="badge-icon">✓</span>
+                        <span>Lab Tested</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="badge-icon">💳</span>
+                        <span>Secure Payment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Summary Bar -->
+    <div class="cart-summary-bar" id="cartSummaryBar">
+        <div class="container">
+            <div class="cart-summary-content">
+                <div class="cart-info">
+                    <span class="cart-icon">🛒</span>
+                    <span id="cartCount">0 items</span>
+                </div>
+                <button class="btn-primary btn-small" id="viewCartBtn">View Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter Bar -->
+    <section class="filter-bar">
+        <div class="container">
+            <div class="filter-content">
+                <div class="filter-left">
+                    <h3>All Products</h3>
+                    <span class="product-count" id="productCount">4 Products</span>
+                </div>
+                <div class="filter-right">
+                    <select id="sortFilter" class="filter-select">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="name">Name: A to Z</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="shop-products">
+        <div class="container">
+            <div class="shop-grid" id="shopGrid">
+                <!-- Products will be loaded here via JavaScript -->
+                <!-- Placeholder while Shopify loads -->
+                <div class="loading-placeholder">
+                    <div class="spinner"></div>
+                    <p>Loading products...</p>
+                </div>
+            </div>
+
+            <!-- Alternative: Manual Product Grid (if Shopify SDK not configured) -->
+            <div class="manual-products" id="manualProducts" style="display: none;">
+                <!-- Product 1: Retatrutide -->
+                <div class="shop-product-card" data-product="retatrutide" data-price="299">
+                    <div class="product-badge-shop">Most Popular</div>
+                    <div class="shop-product-image">
+                        <span class="molecule-icon-shop">🧬</span>
+                    </div>
+                    <div class="shop-product-info">
+                        <h3>Retatrutide</h3>
+                        <p class="product-subtitle-shop">Triple Agonist Research Peptide</p>
+                        <div class="product-details-shop">
+                            <ul>
+                                <li>✓ 10mg vial</li>
+                                <li>✓ 99%+ purity verified</li>
+                                <li>✓ COA included</li>
+                                <li>✓ Free shipping over $500</li>
+                            </ul>
+                        </div>
+                        <div class="product-footer-shop">
+                            <div class="price-info">
+                                <span class="price-label">Price:</span>
+                                <span class="price-amount">$299.00</span>
+                            </div>
+                            <div class="quantity-selector">
+                                <label>Qty:</label>
+                                <input type="number" min="1" max="10" value="1" class="qty-input">
+                            </div>
+                            <button class="btn-primary btn-add-cart" data-product-id="retatrutide">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: Tirzepatide -->
+                <div class="shop-product-card" data-product="tirzepatide" data-price="249">
+                    <div class="shop-product-image">
+                        <span class="molecule-icon-shop">⚗️</span>
+                    </div>
+                    <div class="shop-product-info">
+                        <h3>Tirzepatide</h3>
+                        <p class="product-subtitle-shop">Dual Agonist Research Peptide</p>
+                        <div class="product-details-shop">
+                            <ul>
+                                <li>✓ 10mg vial</li>
+                                <li>✓ 99%+ purity verified</li>
+                                <li>✓ COA included</li>
+                                <li>✓ Free shipping over $500</li>
+                            </ul>
+                        </div>
+                        <div class="product-footer-shop">
+                            <div class="price-info">
+                                <span class="price-label">Price:</span>
+                                <span class="price-amount">$249.00</span>
+                            </div>
+                            <div class="quantity-selector">
+                                <label>Qty:</label>
+                                <input type="number" min="1" max="10" value="1" class="qty-input">
+                            </div>
+                            <button class="btn-primary btn-add-cart" data-product-id="tirzepatide">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3: BPC-157 -->
+                <div class="shop-product-card" data-product="bpc157" data-price="89">
+                    <div class="shop-product-image">
+                        <span class="molecule-icon-shop">💊</span>
+                    </div>
+                    <div class="shop-product-info">
+                        <h3>BPC-157</h3>
+                        <p class="product-subtitle-shop">Body Protection Compound</p>
+                        <div class="product-details-shop">
+                            <ul>
+                                <li>✓ 5mg vial</li>
+                                <li>✓ 99%+ purity verified</li>
+                                <li>✓ COA included</li>
+                                <li>✓ Free shipping over $500</li>
+                            </ul>
+                        </div>
+                        <div class="product-footer-shop">
+                            <div class="price-info">
+                                <span class="price-label">Price:</span>
+                                <span class="price-amount">$89.00</span>
+                            </div>
+                            <div class="quantity-selector">
+                                <label>Qty:</label>
+                                <input type="number" min="1" max="10" value="1" class="qty-input">
+                            </div>
+                            <button class="btn-primary btn-add-cart" data-product-id="bpc157">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4: TB-500 -->
+                <div class="shop-product-card" data-product="tb500" data-price="129">
+                    <div class="shop-product-image">
+                        <span class="molecule-icon-shop">🔬</span>
+                    </div>
+                    <div class="shop-product-info">
+                        <h3>TB-500</h3>
+                        <p class="product-subtitle-shop">Thymosin Beta-4 Fragment</p>
+                        <div class="product-details-shop">
+                            <ul>
+                                <li>✓ 5mg vial</li>
+                                <li>✓ 99%+ purity verified</li>
+                                <li>✓ COA included</li>
+                                <li>✓ Free shipping over $500</li>
+                            </ul>
+                        </div>
+                        <div class="product-footer-shop">
+                            <div class="price-info">
+                                <span class="price-label">Price:</span>
+                                <span class="price-amount">$129.00</span>
+                            </div>
+                            <div class="quantity-selector">
+                                <label>Qty:</label>
+                                <input type="number" min="1" max="10" value="1" class="qty-input">
+                            </div>
+                            <button class="btn-primary btn-add-cart" data-product-id="tb500">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal-overlay" id="cartOverlay"></div>
+        <div class="cart-modal-content">
+            <div class="cart-header">
+                <h2>Shopping Cart</h2>
+                <button class="cart-close" id="cartClose">&times;</button>
+            </div>
+            <div class="cart-body" id="cartBody">
+                <div class="empty-cart" id="emptyCart">
+                    <span class="empty-icon">🛒</span>
+                    <p>Your cart is empty</p>
+                    <button class="btn-secondary" id="continueShopping">Continue Shopping</button>
+                </div>
+                <div class="cart-items" id="cartItems" style="display: none;">
+                    <!-- Cart items will be populated here -->
+                </div>
+            </div>
+            <div class="cart-footer" id="cartFooter" style="display: none;">
+                <div class="cart-totals">
+                    <div class="subtotal">
+                        <span>Subtotal:</span>
+                        <span id="cartSubtotal">$0.00</span>
+                    </div>
+                    <div class="shipping">
+                        <span>Shipping:</span>
+                        <span id="cartShipping">Calculated at checkout</span>
+                    </div>
+                    <div class="total">
+                        <span>Total:</span>
+                        <span id="cartTotal">$0.00</span>
+                    </div>
+                </div>
+                <div class="cart-actions">
+                    <button class="btn-secondary btn-block" id="continueShoppingFooter">Continue Shopping</button>
+                    <button class="btn-primary btn-block" id="checkoutBtn">Proceed to Checkout</button>
+                </div>
+                <p class="secure-notice">🔒 Secure checkout powered by Shopify</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info Section -->
+    <section class="shop-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">🚚</div>
+                    <h4>Fast Shipping</h4>
+                    <p>Orders ship within 24 hours. Free shipping on orders over $500.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">🔒</div>
+                    <h4>Secure Payment</h4>
+                    <p>All transactions are encrypted and secure. Multiple payment options available.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">✓</div>
+                    <h4>Quality Guaranteed</h4>
+                    <p>Every batch is lab tested with Certificate of Analysis included.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">💬</div>
+                    <h4>Expert Support</h4>
+                    <p>Have questions? Our team is here to help with your research needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="shop-disclaimer">
+        <div class="container">
+            <div class="disclaimer-box">
+                <h4>⚠️ Important Notice</h4>
+                <p>
+                    All products are sold strictly for research purposes only. These products are not intended for human consumption,
+                    veterinary use, or any other purpose. By purchasing, you confirm that you are 18 years or older and understand
+                    that these compounds are for laboratory and research applications only. Please ensure compliance with all local,
+                    state, and federal regulations regarding the purchase and use of research chemicals.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>🏓 PickleballPeptides</h4>
+                    <p>Premium research peptides for scientific applications. Not intended for human consumption.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#retatrutide">Retatrutide</a></li>
+                        <li><a href="#tirzepatide">Tirzepatide</a></li>
+                        <li><a href="#bpc157">BPC-157</a></li>
+                        <li><a href="#tb500">TB-500</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="../index.html#quality">Quality Assurance</a></li>
+                        <li><a href="../index.html#faq">FAQ</a></li>
+                        <li><a href="../index.html#contact">Contact Us</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>orders@pickleballpeptides.com</li>
+                        <li>+1 (555) 123-4567</li>
+                        <li>Mon-Fri: 9am-6pm EST</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PickleballPeptides. All rights reserved.</p>
+                <p class="disclaimer">
+                    <strong>Disclaimer:</strong> All products are sold for research purposes only. Not for human or veterinary use.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="shop.js"></script>
+</body>
+</html>
